@@ -494,35 +494,40 @@
   <h2 class="text-4xl text-white font-bold mb-10 text-center">Contacto</h2>
 
   <form action="https://formsubmit.co/joseola18@yahoo.com.ar" method="POST" class="space-y-4">
-    <div id="mensajeContacto" class="hidden fixed bottom-6 right-6 bg-green-600 text-white px-6 py-4 rounded-lg shadow-lg flex items-center space-x-4 z-50">
-  <span>GRACIAS, PRONTO TE CONTACTAREMOS.</span>
-  <button onclick="document.getElementById('mensajeContacto').classList.add('hidden')" class="text-white hover:text-gray-300 text-xl leading-none">✖</button>
-</div>
 
+  <div id="mensajeContacto" class="hidden fixed bottom-6 right-6 bg-green-600 text-white px-6 py-4 rounded-lg shadow-lg flex items-center space-x-4 z-50">
+    <span>GRACIAS, PRONTO TE CONTACTAREMOS.</span>
+    <button onclick="document.getElementById('mensajeContacto').classList.add('hidden')" class="text-white hover:text-gray-300 text-xl leading-none">✖</button>
+  </div>
 
-    <input type="hidden" name="_next" value="https://graciasolatrading.netlify.app/">
+  <input type="hidden" name="_next" value="https://graciasolatrading.netlify.app/">
+  <input type="hidden" name="_captcha" value="false">
 
+  <div>
+    <label for="name" class="block mb-2 font-semibold">Nombre completo</label>
+    <input type="text" id="name" name="name" required class="w-full p-3 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+  </div>
 
-    <input type="hidden" name="_captcha" value="false">
+  <div>
+    <label for="email" class="block mb-2 font-semibold">Correo electrónico</label>
+    <input type="email" id="email" name="email" required class="w-full p-3 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+  </div>
 
-    <div>
-      <label for="name" class="block mb-2 font-semibold">Nombre completo</label>
-      <input type="text" id="name" name="name" required class="w-full p-3 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
-    </div>
-    <div>
-      <label for="email" class="block mb-2 font-semibold">Correo electrónico</label>
-      <input type="email" id="email" name="email" required class="w-full p-3 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
-    </div>
-    <div>
-      <label for="whatsapp" class="block mb-2 font-semibold">Número de WhatsApp</label>
-      <input type="tel" id="whatsapp" name="whatsapp" required class="w-full p-3 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
-    </div>
-    <div>
-      <label for="message" class="block mb-2 font-semibold">Mensaje</label>
-      <textarea id="message" name="message" rows="5" required class="w-full p-3 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-    </div>
-    <button type="submit" class="btn-royal w-full py-4 rounded font-semibold hover:bg-blue-700 transition">Enviar Mensaje</button>
-  </form>
+  <div>
+    <label for="telefono" class="block mb-2 font-semibold">Número de WhatsApp</label>
+    <input type="tel" id="telefono" name="telefono" placeholder="+54 9 ..." required class="w-full p-3 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+  </div>
+
+  <div>
+    <label for="message" class="block mb-2 font-semibold">Mensaje</label>
+    <textarea id="message" name="message" rows="4" required class="w-full p-3 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+  </div>
+
+  <button type="submit" class="btn-royal px-6 py-3 rounded font-semibold hover:bg-blue-700 transition w-full">
+    Enviar Mensaje
+  </button>
+</form>
+
 </section>
 
 <script>
