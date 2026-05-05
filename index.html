@@ -327,13 +327,21 @@
 </div>
 <div id="grafico-oro" style="margin: 30px auto; width: 100%;">
   <div class="tradingview-widget-container tradingview-orogold-container" style="height: 700px;">
-    <div id="tradingview-orogold" style="height:650px;"></div>
+    <div id="tradingview-orogold" style="height:550px;"></div>
+
+<style>
+@media (max-width: 768px) {
+  #tradingview-orogold {
+    height: 300px !important;
+  }
+}
+</style>
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <script type="text/javascript">
     new TradingView.widget({
   container_id: "tradingview-orogold",
   width: "100%",
-  height: 650,
+  height: 550,
   symbol: "OANDA:XAUUSD",
   interval: "60",
   timezone: "Etc/UTC",
