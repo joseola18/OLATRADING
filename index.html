@@ -390,7 +390,17 @@
   </div>
 </div>
 
-  
+  <script>
+function abrirPantallaCompleta() {
+  var elem = document.getElementById("grafico-oro");
+
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) {
+    elem.webkitRequestFullscreen();
+  }
+}
+</script>
 
 </body>
 </html>
