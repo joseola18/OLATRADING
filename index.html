@@ -329,7 +329,7 @@
      new TradingView.widget({
   container_id: "tradingview-orogold",
   width: "100%",
-  height: window.innerWidth < 768 ? 300 : 500,
+  height: window.innerWidth < 768 ? window.innerHeight - 180 : 500,
   symbol: "OANDA:XAUUSD",
   interval: "60",
   timezone: "Etc/UTC",
