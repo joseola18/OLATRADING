@@ -118,13 +118,7 @@
     }
 
     /* NUEVO: Estilos para gráfico Oro mejorado y responsive */
- .tradingview-orogold-container {
-  width: 100%;
-  height: 500px;
-  overflow: hidden;
-  border-radius: 0.5rem;
-}
-
+ }
 @media (max-width: 768px) {
   .tradingview-orogold-container {
     height: 70vh;
@@ -322,7 +316,7 @@
 
   <hr />
   <!-- Gráfico en vivo Oro con indicadores y estrategia -->
-  <section id="graficos" class="max-w-7xl mx-auto px-6 py-16 bg-gray-900 rounded-xl shadow-lg fade-in">
+  <section id="graficos" class="w-full px-6 py-16 bg-gray-900 rounded-xl shadow-lg fade-in">
     <h2 class="text-4xl text-white font-bold mb-10 text-center">Gráfico en Tiempo Real - Oro (XAUUSD) con Estrategia</h2>
     
     <!-- Gráfico de oro (solo en PC) -->
@@ -331,7 +325,7 @@
     Ver en Pantalla Completa
   </button>
 </div>
-<div id="grafico-oro" style="margin: 30px auto; max-width: 1400px;">
+<div id="grafico-oro" style="margin: 30px auto; width: 100%;">
   <div class="tradingview-widget-container tradingview-orogold-container" style="height: 650px;">
     <div id="tradingview-orogold" style="height:600px;"></div>
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
