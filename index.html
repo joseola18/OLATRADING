@@ -137,6 +137,11 @@
     height: 300px !important;
   }
 }
+    @media (max-width: 768px) {
+  #tradingview-orogold {
+    height: 300px !important;
+  }
+}
 <style>
   @media (max-width: 768px) {
     .ola-trading-fix {
@@ -309,6 +314,11 @@
     <h2 class="text-4xl text-white font-bold mb-10 text-center">Gráfico en Tiempo Real - Oro (XAUUSD) con Estrategia</h2>
     
     <!-- Gráfico de oro (solo en PC) -->
+    <div style="text-align: right; margin-bottom: 10px;">
+  <button onclick="abrirPantallaCompleta()" class="btn-royal px-4 py-2 rounded">
+    Ver en Pantalla Completa
+  </button>
+</div>
 <div id="grafico-oro" style="margin: 30px auto; max-width: 1000px;">
   <div class="tradingview-widget-container tradingview-orogold-container">
     <div id="tradingview-orogold"></div>
@@ -317,7 +327,7 @@
      new TradingView.widget({
   container_id: "tradingview-orogold",
   width: "100%",
-  height: 500,
+  height: window.innerWidth < 768 ? 300 : 500,
   symbol: "OANDA:XAUUSD",
   interval: "60",
   timezone: "Etc/UTC",
