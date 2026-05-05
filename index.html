@@ -132,6 +132,11 @@
         max-height: 300px;
       }
     }
+    @media (max-width: 768px) {
+  #tradingview-orogold {
+    height: 300px !important;
+  }
+}
 <style>
   @media (max-width: 768px) {
     .ola-trading-fix {
@@ -312,7 +317,7 @@
       new TradingView.widget({
         container_id: "tradingview-orogold",
         width: "100%",
-        height: 500,
+        height: window.innerWidth < 768 ? 300 : 500,
         symbol: "OANDA:XAUUSD",
         interval: "60",
         timezone: "Etc/UTC",
